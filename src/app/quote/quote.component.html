@@ -1,0 +1,9 @@
+<div *ngFor='let quote of quotes; let i = index'>
+    <p>{{ quote.description }}</p>
+    <button (click)='showDetails(i)'>Details</button>
+    <app-quote-details 
+    (addUpVote)="upVote(i)" (addDownVote)="downVote(i)" 
+    (goalDelete)="deleteGoal(i)"*ngIf='quote.showQuoteDetails' [quote]='quote'>
+
+    </app-quote-details>
+</div>
