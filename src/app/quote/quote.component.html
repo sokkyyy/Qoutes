@@ -1,19 +1,27 @@
+<h1>QUOTES</h1>
+<hr>
 <div class="row">
-    <div class="col-sm-4" *ngFor='let quote of quotes; let i = index'>
-        <div class="card">
-            <div class="card-body">    
-                <p appHighlightUpvote class="card-text"> {{ quote.description }} ~ by: {{ quote.author}} </p>
-                <button (click)='showDetails(i)' class="btn btn-primary">Details</button>
-                <app-quote-details 
-                    (addUpVote)="upVote(i)" (addDownVote)="downVote(i)" 
-                    (goalDelete)="deleteGoal(i)"*ngIf='quote.showQuoteDetails' [quote]='quote'>
-                </app-quote-details>
+    <div class="col">
+        <div class="col-sm-4" *ngFor='let quote of quotes; let i = index'>
+            <div class="card">
+                <div class="card-body">    
+                    <p appHighlightUpvote class="card-text"> {{ quote.description }} ~ by: {{ quote.author}} </p>
+                    <button (click)='showDetails(i)' class="btn btn-primary">Details</button>
+                    <app-quote-details 
+                        (addUpVote)="upVote(i)" (addDownVote)="downVote(i)" 
+                        (goalDelete)="deleteGoal(i)"*ngIf='quote.showQuoteDetails' [quote]='quote'>
+                    </app-quote-details>
+                </div>
             </div>
         </div>
     </div>
-    <button (click)="displayForm()">New Quote</button>
+    <div class="col">
+        <button (click)="displayForm()">New Quote</button>
+        <div class="col-sm-6">
+            <app-quote-form *ngIf="showForm" (addQuote)="submitQuote($event)"></app-quote-form>
+        </div>
+    </div>
 </div>
-
-<div>
-    <app-quote-form *ngIf="showForm" (addQuote)="submitQuote($event)"></app-quote-form>
+<div class="image">
+    <img src="/src/assets/EC92m-RWkAAwEuz.jpeg" class="img-fluid" alt="Responsive image">
 </div>

@@ -1,7 +1,7 @@
-<div class="extra">
-    <span (click)="upVote()"> Upvotes: {{ quote.upVote }}</span>
+<div class="container">
+    <a (click)="upVote()"> <img src="./icons8-sort-up-80.png"></a> <span>{{ quote.upVote }}</span>
     
-    <span (click)="downVote()">Downvotes: {{ quote.downVote }}</span>
+    <a (click)="downVote()"> <img src="./icons8-sort-down-80.png"></a><span> {{ quote.downVote }}</span>
 
     <span>{{ quote.dateCreated | timePassed }} days</span>
 

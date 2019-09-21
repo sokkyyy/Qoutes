@@ -22,7 +22,7 @@ import { TimePassedPipe } from './time-passed.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
