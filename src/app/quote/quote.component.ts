@@ -15,6 +15,8 @@ export class QuoteComponent implements OnInit {
     new Quote(4, 'Wisely, and slow. They stumble that run fast', 'William Shakespeare', 'Ray', 6, 3, new Date()),
   ];
 
+  showForm = false;
+
   showDetails(index) {
     this.quotes[index].showQuoteDetails = !this.quotes[index].showQuoteDetails;
   }
@@ -36,7 +38,14 @@ export class QuoteComponent implements OnInit {
     quote.id = this.quotes.length + 1;
     this.quotes.push(quote);
     console.log(this.quotes);
+    this.showForm = false;
   }
+
+  displayForm() {
+    this.showForm = !this.showForm;
+  }
+
+
 
 
   constructor() { }

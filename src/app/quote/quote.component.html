@@ -1,16 +1,9 @@
-<div  *ngFor='let quote of quotes; let i = index' class='row'>
-    <div class="col s12 m7">
-        <div class="card horizontal">
-            <div class="card-image">
-                <img src="https://lorempixel.com/100/190/nature/6">
-            </div>
-            
-            <div class="card-stacked">
-                <div class="card-content">
-                   <p appHighlightUpvote> {{ quote.description }} ~ by: {{ quote.author}} </p>
-                </div>
-            <div class="card-action">
-                <button (click)='showDetails(i)' class="waves-effect waves-light btn">Details</button>
+<div class="row">
+    <div class="col-sm-4" *ngFor='let quote of quotes; let i = index'>
+        <div class="card">
+            <div class="card-body">    
+                <p appHighlightUpvote class="card-text"> {{ quote.description }} ~ by: {{ quote.author}} </p>
+                <button (click)='showDetails(i)' class="btn btn-primary">Details</button>
                 <app-quote-details 
                     (addUpVote)="upVote(i)" (addDownVote)="downVote(i)" 
                     (goalDelete)="deleteGoal(i)"*ngIf='quote.showQuoteDetails' [quote]='quote'>
@@ -18,8 +11,9 @@
             </div>
         </div>
     </div>
+    <button (click)="displayForm()">New Quote</button>
 </div>
-</div>
-<div class="row">
-    <app-quote-form (addQuote)="submitQuote($event)"></app-quote-form>
+
+<div>
+    <app-quote-form *ngIf="showForm" (addQuote)="submitQuote($event)"></app-quote-form>
 </div>
