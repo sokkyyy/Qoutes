@@ -7,6 +7,7 @@ export class HighlightUpvoteDirective {
 
 
   constructor(private elem: ElementRef) {
+    elem.nativeElement.style.fontWeight = 'bold';
 
   }
 

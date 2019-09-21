@@ -1,6 +1,8 @@
-<span>{{quote.author}}</span>
-<span (click)="upVote()">Upvotes: {{ quote.upVote }}</span>
-<span (click)="downVote()">Downvotes: {{ quote.downVote }}</span>
+<div class="extra">
+    <span (click)="upVote()">Upvotes: {{ quote.upVote }}</span>
+    <span (click)="downVote()">Downvotes: {{ quote.downVote }}</span>
 
-<span>{{ quote.dateCreated | timePassed }} days</span>
-<button (click)="deleteGoal()">Delete Quote</button>
+    <span>{{ quote.dateCreated | timePassed }} days</span>
+    <button (click)="deleteGoal()">Delete Quote</button>
+
+</div>
