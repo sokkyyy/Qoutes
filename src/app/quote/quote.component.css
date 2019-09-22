@@ -1,3 +1,7 @@
+.heading {
+    color: white;
+    
+}
 .card {
     width: 25rem;
     margin-top: 10px;
@@ -10,4 +14,9 @@
 }
 .header-form {
     float: right;
+}
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }

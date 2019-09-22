@@ -1,5 +1,5 @@
-<div class="container" >
-    <h2 >QUOTES</h2>
+<div class="container" style="text-align: center;">
+    <h2 class="heading" >QUOTES</h2>
 </div>
 <hr>
 
@@ -8,19 +8,18 @@
         
         <div class="card" *ngFor='let quote of quotes; let i = index'>
             <div class="card-body">    
-                <p appHighlightUpvote class="card-text"> {{ quote.description }} ~ by: {{ quote.author}} </p>
+                <p appHighlightUpvote class="card-text"> {{ quote.description }}. ~ {{ quote.author}} </p>
                 <button (click)='showDetails(i)' class="btn btn-primary">Show Details</button>
                 <app-quote-details 
                     (addUpVote)="upVote(i)" (addDownVote)="downVote(i)" 
                     (goalDelete)="deleteGoal(i)"*ngIf='quote.showQuoteDetails' [quote]='quote'>
                 </app-quote-details>
             </div>
-        </div>
-        
+        </div>      
     </div>
 
-    <div class="col-sm" sticky>
-        <button (click)="displayForm()" class="btn btn-info quote-btn">New Quote</button>
+    <div class="col-sm" style="position: -webkit-sticky; position: sticky; top: 0;">
+        <button (click)="displayForm()" class="btn btn-info">New Quote</button>
         <app-quote-form *ngIf="showForm" (addQuote)="submitQuote($event)" id="quoteForm" ></app-quote-form>
     </div>
 </div>
