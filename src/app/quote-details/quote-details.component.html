@@ -1,10 +1,24 @@
-<div class="container">
-    <a (click)="upVote()"> <img src="./icons8-sort-up-80.png"></a> <span>{{ quote.upVote }}</span>
-    
-    <a (click)="downVote()"> <img src="./icons8-sort-down-80.png"></a><span> {{ quote.downVote }}</span>
+<div class="container" style="margin-top: 10px; ">
 
-    <span>{{ quote.dateCreated | timePassed }} days</span>
+    <ul class="list-group list-group-flush">
 
-    <button (click)="deleteGoal()">Delete Quote</button>
+        <li class="list-group-item">
+            <span>Upvotes: {{ quote.upVote }}</span>
+            <fa-icon icon="thumbs-up" (click)="upVote()" class="icon-spacing">Upvote</fa-icon>
+        </li>
+
+        <li class="list-group-item">
+            <span>Downvotes: {{ quote.downVote }}</span>
+            <fa-icon icon="thumbs-down" (click)="downVote()" class="icon-spacing"></fa-icon>     
+        </li>
+
+        <li class="list-group-item">
+            <fa-icon icon="clock"> </fa-icon>
+            <span>{{ quote.dateCreated | timePassed }}</span>
+        </li>
+    </ul>
+    <span class="">Submitted by: {{quote.submittedBy }}</span>
+
+    <button (click)="deleteGoal()" class="btn btn-outline-danger icon-spacing" style="margin-top: 10px">Delete Quote</button>
 
 </div>
