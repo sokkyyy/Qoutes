@@ -17,6 +17,7 @@ export class QuoteComponent implements OnInit {
   ];
 
   showForm = false;
+  
 
   showDetails(index) {
     this.quotes[index].showQuoteDetails = !this.quotes[index].showQuoteDetails;
@@ -45,6 +46,22 @@ export class QuoteComponent implements OnInit {
   displayForm() {
     this.showForm = !this.showForm;
   }
+
+  findUpvote() {
+    return 'red';
+  }
+  // findUpvote(index) {
+    // const currentUpVote = this.quotes[index].upVote;
+    // const quotesWithoutCurrent = this.quotes.splice(index, 1);
+    // tslint:disable-next-line: prefer-for-of
+    // for (let i = 0; i < quotesWithoutCurrent.length;  i++) {
+      // if (currentUpVote < quotesWithoutCurrent[i].upVote) {
+        // return 'black';
+      // } else {
+        // return 'red';
+      // }
+    // }
+  // }
 
 
 

@@ -6,12 +6,12 @@ import { Quote } from './quote';
   selector: '[appHighlightUpvote]'
 })
 export class HighlightUpvoteDirective {
-  @Input() quote: Quote;
+  @Input() highlight: string;
 
 
   constructor(private elem: ElementRef) {
 
-    elem.nativeElement.style.fontWeight = 'bold';
+    elem.nativeElement.style.color = 'red';
 
   }
 
