@@ -9,10 +9,11 @@ export class HighlightUpvoteDirective {
   @Input() highlight: string;
 
 
-  constructor(private elem: ElementRef) {
 
-    elem.nativeElement.style.color = 'red';
 
+  constructor(private elem: ElementRef) { }
+
+  private textDeco(action: string) {
+    this.elem.nativeElement.style.color = action;
   }
-
 }
