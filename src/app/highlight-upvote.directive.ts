@@ -1,10 +1,12 @@
-import { Directive, ElementRef } from '@angular/core';
+import { Directive, ElementRef, Input } from '@angular/core';
 import { Quote } from './quote';
+
 
 @Directive({
   selector: '[appHighlightUpvote]'
 })
 export class HighlightUpvoteDirective {
+  @Input() quote: Quote;
 
 
   constructor(private elem: ElementRef) {
