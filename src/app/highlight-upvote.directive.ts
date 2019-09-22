@@ -1,5 +1,5 @@
 import { Directive, ElementRef, Input } from '@angular/core';
-import { Quote } from './quote';
+
 
 
 @Directive({
@@ -7,9 +7,6 @@ import { Quote } from './quote';
 })
 export class HighlightUpvoteDirective {
   @Input() highlight: string;
-
-
-
 
   constructor(private elem: ElementRef) { }
 
