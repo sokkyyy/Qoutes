@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faThumbsUp, faThumbsDown, faClock } from '@fortawesome/free-solid-svg-icons';
+import { faThumbsUp, faThumbsDown, faClock, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -33,6 +33,6 @@ import { TimePassedPipe } from './time-passed.pipe';
 })
 export class AppModule {
   constructor() {
-    library.add(faThumbsUp, faThumbsDown, faClock);
+    library.add(faThumbsUp, faThumbsDown, faClock, faTrash);
   }
  }

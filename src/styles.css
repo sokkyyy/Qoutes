@@ -1,1 +1,7 @@
 @import "~bootstrap/dist/css/bootstrap.css";
+
+html,
+body {
+    background: url('https://mdbootstrap.com/img/Photos/Slides/img%20(54).jpg');
+    width: 100%;
+}

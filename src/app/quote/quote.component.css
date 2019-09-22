@@ -1,0 +1,13 @@
+.card {
+    width: 25rem;
+    margin-top: 10px;
+}
+.col-sm {
+    margin-left: 100px;
+}
+.quote-btn {
+    padding-top: 10px;
+}
+.header-form {
+    float: right;
+}

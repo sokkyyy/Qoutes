@@ -3,22 +3,38 @@
     <ul class="list-group list-group-flush">
 
         <li class="list-group-item">
-            <span>Upvotes: {{ quote.upVote }}</span>
-            <fa-icon icon="thumbs-up" (click)="upVote()" class="icon-spacing">Upvote</fa-icon>
+            <span class="detail-title">Upvotes:</span><span class="upvote"> {{ quote.upVote }}</span>
+            <a class="icon-spacing">
+                <fa-icon icon="thumbs-up" (click)="upVote()" 
+                [styles]="{'stroke': 'green', 'color': 'green'}">
+                </fa-icon>
+            </a>
         </li>
 
         <li class="list-group-item">
-            <span>Downvotes: {{ quote.downVote }}</span>
-            <fa-icon icon="thumbs-down" (click)="downVote()" class="icon-spacing"></fa-icon>     
+            <span class="detail-title">Downvotes:</span><span class="downvote">  {{ quote.downVote }}</span>
+            <a class="icon-spacing">
+                <fa-icon icon="thumbs-down" (click)="downVote()"
+                [styles]="{'stroke': 'brown', 'color': 'brown'}">
+                </fa-icon>
+            </a>     
+        </li>
+        
+        <li class="list-group-item">
+            <span class="detail-title">Submitted by</span><span class="submitter">{{quote.submittedBy }}</span> 
         </li>
 
-        <li class="list-group-item">
-            <fa-icon icon="clock"> </fa-icon>
-            <span>{{ quote.dateCreated | timePassed }}</span>
+        <li class="list-group-item" style="text-align: center; ">
+            <fa-icon icon="clock" size="lg"></fa-icon>
+            <span class="timer">{{ quote.dateCreated | timePassed }} days</span>
         </li>
     </ul>
-    <span class="">Submitted by: {{quote.submittedBy }}</span>
 
-    <button (click)="deleteGoal()" class="btn btn-outline-danger icon-spacing" style="margin-top: 10px">Delete Quote</button>
-
+    <a style="margin-top: 10px" class="icon-spacing" (click)="deleteGoal()" >
+        <fa-icon 
+        icon="trash" 
+         size="lg" [styles]="{'stroke': 'red', 'color': 'red'}">
+        </fa-icon>
+    </a>
+    
 </div>

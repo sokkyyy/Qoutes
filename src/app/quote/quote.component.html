@@ -1,9 +1,12 @@
-<h1>QUOTES</h1>
+<div class="container" >
+    <h2 >QUOTES</h2>
+</div>
 <hr>
+
 <div class="row">
     <div class="col-sm">
         
-        <div class="card" style="width: 25rem;" *ngFor='let quote of quotes; let i = index'>
+        <div class="card" *ngFor='let quote of quotes; let i = index'>
             <div class="card-body">    
                 <p appHighlightUpvote class="card-text"> {{ quote.description }} ~ by: {{ quote.author}} </p>
                 <button (click)='showDetails(i)' class="btn btn-primary">Show Details</button>
@@ -16,9 +19,9 @@
         
     </div>
 
-    <div class="col-sm">
-        <button (click)="displayForm()" class="btn btn-info">New Quote</button>
-        <app-quote-form *ngIf="showForm" (addQuote)="submitQuote($event)"></app-quote-form>
+    <div class="col-sm" sticky>
+        <button (click)="displayForm()" class="btn btn-info quote-btn">New Quote</button>
+        <app-quote-form *ngIf="showForm" (addQuote)="submitQuote($event)" id="quoteForm" ></app-quote-form>
     </div>
 </div>
 

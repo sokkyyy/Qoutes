@@ -1,3 +1,27 @@
 .icon-spacing {
  float: right;
 }
+.detail-title {
+  font-size: 17px;
+}
+.upvote {
+  color: green;
+  font-size: 15px;
+  font-weight: bold;
+}
+.downvote {
+  color: brown;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+}
+.submitter {
+  font-weight: bold;
+  font-size: 15px;
+  color: rgb(95, 95, 248);
+  padding-left: 10px;
+}
+.timer {
+  padding-left: 20px;
+}
