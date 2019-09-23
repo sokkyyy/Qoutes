@@ -19,9 +19,10 @@
         </div>      
     </div>
 
-    <div class="col-sm" style="position: -webkit-sticky; position: sticky; top: 0;">
-        <button (click)="displayForm()" class="btn btn-info">New Quote</button>
+    <div class="col-sm" style="margin-top: 10px">
+        <button (click)="displayForm()" class="btn btn-info btn-lg">Create A New Quote</button>
         <app-quote-form *ngIf="showForm" (addQuote)="submitQuote($event)" id="quoteForm" ></app-quote-form>
     </div>
+
 </div>
 
