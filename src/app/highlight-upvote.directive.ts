@@ -8,9 +8,9 @@ import { Directive, ElementRef, Input } from '@angular/core';
 export class HighlightUpvoteDirective {
   @Input() highlight: string;
 
-  constructor(private elem: ElementRef) { }
-
-  private textDeco(action: string) {
-    this.elem.nativeElement.style.color = action;
+  constructor(private elem: ElementRef) {
+    elem.nativeElement.style.color = this.highlight;
   }
+
+
 }

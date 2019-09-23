@@ -7,7 +7,8 @@
     <div class="col-sm">
         
         <div class="card" *ngFor='let quote of quotes; let i = index'>
-            <div class="card-body">    
+            <div class="card-body"> 
+                <!--DIRECTIVE HIGHLIGHT, CHANGEI8 -->   
                 <p appHighlightUpvote [highlight]="showRed" class="card-text"> {{ quote.description }}. ~ {{ quote.author}} </p>
                 <button (click)='showDetails(i)' class="btn btn-primary">Show Details</button>
                 <app-quote-details 
