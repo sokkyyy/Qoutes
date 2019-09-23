@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Input } from '@angular/core';
+import { Directive, ElementRef } from '@angular/core';
 
 
 
@@ -6,11 +6,9 @@ import { Directive, ElementRef, Input } from '@angular/core';
   selector: '[appHighlightUpvote]'
 })
 export class HighlightUpvoteDirective {
-  @Input() highlight: string;
+
 
   constructor(private elem: ElementRef) {
-    elem.nativeElement.style.color = this.highlight;
+    elem.nativeElement.style.color = 'blue';
   }
-
-
 }

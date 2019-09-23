@@ -8,8 +8,15 @@
         
         <div class="card" *ngFor='let quote of quotes; let i = index'>
             <div class="card-body"> 
-                <!--DIRECTIVE HIGHLIGHT, CHANGEI8 -->   
-                <p appHighlightUpvote [highlight]="showRed" class="card-text"> {{ quote.description }}. ~ {{ quote.author}} </p>
+                
+
+                <p *ngIf="findLargestUpvote() !== quote.upVote || quote.upVote === 0" class="card-text">
+                    {{ quote.description }}. ~ {{ quote.author}}
+                </p>
+
+                <p appHighlightUpvote 
+                *ngIf="findLargestUpvote() === quote.upVote && quote.upVote > 0" 
+                class="card-text"> {{ quote.description }}. ~ {{ quote.author}} </p>
                 <button (click)='showDetails(i)' class="btn btn-primary">Show Details</button>
                 <app-quote-details 
                     (addUpVote)="upVote(i)" (addDownVote)="downVote(i)" 
@@ -21,8 +28,7 @@
 
     <div class="col-sm" style="margin-top: 10px">
         <button (click)="displayForm()" class="btn btn-info btn-lg">Create A New Quote</button>
-        <app-quote-form *ngIf="showForm" (addQuote)="submitQuote($event)" id="quoteForm" ></app-quote-form>
+        <app-quote-form *ngIf="showForm" (addQuote)="submitQuote($event)" id="quoteForm" style="margin-top: 30px;"></app-quote-form>
     </div>
-
 </div>
 

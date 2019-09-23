@@ -49,18 +49,16 @@ export class QuoteComponent implements OnInit {
   }
 
 
-  findUpvote(index) {
-    const currentUpVote = this.quotes[index].upVote;
-    const quotes = this.quotes.slice();
-    const quotesWithoutCurrent = quotes.splice(index, 1);
-   //  tslint:disable-next-line: prefer-for-of
-    for (let i = 0; i < quotesWithoutCurrent.length;  i++) {
-      if (currentUpVote < quotesWithoutCurrent[i].upVote) {
-        return 'black';
-      } else {
-        return 'red';
+  findLargestUpvote() {
+    let largest = 0;
+    // tslint:disable-next-line: prefer-for-of
+    for (let i = 0; i < this.quotes.length; i++) {
+      const currentUpvote: number = this.quotes[i].upVote;
+      if (currentUpvote > largest) {
+        largest = currentUpvote;
       }
     }
+    return largest;
   }
 
 
