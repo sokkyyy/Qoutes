@@ -12,8 +12,8 @@ export class QuoteComponent implements OnInit {
   quotes = [
     new Quote(1, 'All that we are is the result of what we have thought', 'Buddha', 'Ray', 0, 0, new Date(2019, 8, 19)),
     new Quote(2, 'I have no special talent. I am only passionately curious', 'Albert Einstein', 'Ray', 0, 0, new Date(2019, 8, 10)),
-    // new Quote(3, 'If you judge people, you have no time to love them', 'Mother Teresa', 'Ray', 0, 0, new Date(2019, 8, 1)),
-    // new Quote(4, 'Wisely, and slow. They stumble that run fast', 'William Shakespeare', 'Ray', 0, 0, new Date()),
+    new Quote(3, 'If you judge people, you have no time to love them', 'Mother Teresa', 'Ray', 0, 0, new Date(2019, 8, 1)),
+    new Quote(4, 'Wisely, and slow. They stumble that run fast', 'William Shakespeare', 'Ray', 0, 0, new Date()),
   ];
 
   showForm = false;

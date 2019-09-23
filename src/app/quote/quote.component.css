@@ -1,5 +1,8 @@
 .heading {
     color: white;
+    font-size: 40px;
+    font-weight: bold;
+    padding-top: 30px;
     
 }
 .card {
