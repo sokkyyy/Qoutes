@@ -5,9 +5,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Description
 
-[Quotes](https://sokkyyy.github.io/Qoutes/) is a web application that displays quotes from famous people.
-Users can upvote or downvote the quotes in application
-Users can also add a new quote..
+[Quotes](https://sokkyyy.github.io/Qoutes/) is a web application that displays quotes and their authors.
+Users can upvote or downvote the quotes in application.
+Users can also add a new quote.
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for testing purposes.
